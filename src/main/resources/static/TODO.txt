@@ -1,0 +1,3 @@
+- student-detail.html - show details
+- add course
+- table of courses

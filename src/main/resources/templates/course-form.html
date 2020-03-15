@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+      <title>Student form</title>
+      <link href="../static/css/style.css" 
+         th:href="@{/css/style.css}" rel="stylesheet" />
+   </head>
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <link href="../static/css/style.css" 
+      th:href="@{/css/style.css}" rel="stylesheet" />
+   <title>Hello, world!</title>
+   </head>
+   <body>
+      <div class="container text-center">
+         <header>
+            <h1 class="head">
+            Student Manager</h3>
+         </header>
+         <main class="text-center">
+            <header>
+               <h5 class="head">Save Student</h5>
+            </header>
+            <form action="#" th:action="@{/course/saveCourse}"
+               th:object="${course}" method="POST">
+               <div class="holder">
+                  <input type="hidden" th:field="*{id}" />
+                  <input type="text" th:field="*{name}"
+                     class="form-control mb-4 col-4" placeholder="Name">
+                  <br/> <br/>
+               </div>
+               Year
+               <select th:field="*{term}">
+                  <option value="summer" label="summer"/>
+                  <option value="winter" label="winter"/>
+               </select>
+               <br/> <br/>
+               <button type="submit" class="btn btn-primary col-2">Save</button>
+            </form>
+      </div>
+      <a th:href="@{/course/list}"
+         class="btn btn-secondary btn-sm mb-3 btn-back">
+      Course list
+      </a>
+      <a th:href="@{/}"
+         class="btn btn-secondary btn-sm mb-3 btn-back">
+      Back to home
+      </a>
+      </main>	
+      </div>
+   </body>
+</html>
