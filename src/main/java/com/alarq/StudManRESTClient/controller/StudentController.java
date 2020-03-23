@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.alarq.StudManRESTClient.entity.Course;
 import com.alarq.StudManRESTClient.entity.Student;
+import com.alarq.StudManRESTClient.exceptions.StudentNotFoundException;
 import com.alarq.StudManRESTClient.service.CourseService;
 import com.alarq.StudManRESTClient.service.StudentService;
 
@@ -70,6 +71,10 @@ public class StudentController {
 	public String showDetails(Model model, @RequestParam("id") int id)
 	{
 		Student student = studentService.get(id);
+		if(student == null)
+			throw new StudentNotFoundException("SSS");
+				//	+ id + " not found");
+		
 		model.addAttribute("student",student);
 		
 		List<Course> allCourses = courseService.getCourses();
