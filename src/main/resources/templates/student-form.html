@@ -17,27 +17,26 @@
    <title>Hello, world!</title>
    </head>
    <body>
-      <div class="container text-center">
+      <div class="container">
          <header>
             <h1 class="head">
-            Student Manager</h3>
+            Student Manager</h1>
          </header>
-         <main class="text-center">
+         <main>
             <header>
                <h5 class="head">Save Student</h5>
             </header>
+            <div class="form">
             <form action="#" th:action="@{/student/saveStudent}"
                th:object="${student}" method="POST">
-               <div class="holder">
                   <input type="hidden" th:field="*{id}" />
-                  <input type="text" th:field="*{firstName}"
+                  <input type="text" style="margin:auto;" th:field="*{firstName}"
                      class="form-control mb-4 col-4" placeholder="First name">
-                  <input type="text" th:field="*{lastName}"
+                  <input type="text" style="margin:auto;" th:field="*{lastName}"
                      class="form-control mb-4 col-4" placeholder="Last name">
-                  <input type="text" th:field="*{email}"
+                  <input type="text" style="margin:auto;"th:field="*{email}"
                      class="form-control mb-4 col-4" placeholder="Email">
-                  <br/> <br/>
-               </div>
+                  <br/> 
                Year
                <select th:field="*{year}">
                   <option value="1" label="1"/>
@@ -49,7 +48,8 @@
                <br/> <br/>
                <button type="submit" class="btn btn-primary col-2">Save</button>
             </form>
-      </div>
+            </div>
+	 <div class="form">
       <a th:href="@{/student/list}"
          class="btn btn-secondary btn-sm mb-3 btn-back">
       Back to list
@@ -58,6 +58,7 @@
          class="btn btn-secondary btn-sm mb-3 btn-back">
       Back to home
       </a>
+       </div>
       </main>	
       </div>
    </body>

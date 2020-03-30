@@ -5,10 +5,13 @@ body
 	color: #efefef;
     font-family: 'Open Sans', sans-serif;
     font-size: 17px;
-    text-align: center;
+
 }
 
-
+.form
+{
+	text-align:center;
+}
 
 
 h1.head
@@ -68,4 +71,3 @@ h5
 	
 }
 
-.holder{ text-align: center; }

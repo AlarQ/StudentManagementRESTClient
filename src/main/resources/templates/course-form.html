@@ -20,19 +20,19 @@
       <div class="container text-center">
          <header>
             <h1 class="head">
-            Student Manager</h3>
+            Student Manager</h1>
          </header>
          <main class="text-center">
             <header>
-               <h5 class="head">Save Student</h5>
+               <h5 class="head">Save Course</h5>
             </header>
             <form action="#" th:action="@{/course/saveCourse}"
                th:object="${course}" method="POST">
                <div class="holder">
-                  <input type="hidden" th:field="*{id}" />
-                  <input type="text" th:field="*{name}"
+                  <input type="hidden" style="margin:auto;" th:field="*{id}" />
+                  <input type="text" style="margin:auto;" th:field="*{name}"
                      class="form-control mb-4 col-4" placeholder="Name">
-                  <br/> <br/>
+                  <br/> 
                </div>
                Year
                <select th:field="*{term}">
@@ -42,7 +42,7 @@
                <br/> <br/>
                <button type="submit" class="btn btn-primary col-2">Save</button>
             </form>
-      </div>
+   
       <a th:href="@{/course/list}"
          class="btn btn-secondary btn-sm mb-3 btn-back">
       Course list
