@@ -1,23 +1,5 @@
 # StudentManagementRESTClient
 
-This is a booktracker, for tracking books you read. It's a desktop application crea.
-
-## Project status
-
-In progress. Adding some functionalities, fixing bugs.
-
-## Built With
-
-* Java 8
-* Spring Boot, Spring MVC, AOP, Security
-* Thymeleaf
-* Maven
-  
-##Configuration
-
-1. Configuration with REST API in: /StudManRESTClient/src/main/resources/application.properties
-2. You can use REST API from my project StudentManagementRESTApi
-
 ## Quick look
 
 <p align="center">
